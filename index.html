@@ -1,29 +1,166 @@
-<!-- Favorite Apps Sidebar -->
-<div class="sidebar">
-  <h3>⭐ Your Apps</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom New Tab</title>
 
-  <div class="app">
-    <div class="app-icon">🌐</div>
-    <div class="app-name">Google</div>
+  <style>
+    /* ===== FULL GIF BACKGROUND ===== */
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+      background: url("background.gif") center center / cover no-repeat fixed;
+    }
+
+    /* ===== TOP BAR (Chrome-like) ===== */
+    .top-bar {
+      height: 45px;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      color: white;
+      font-size: 14px;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-left: 20px;
+    }
+
+    .tab {
+      padding: 6px 12px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* ===== LEFT SIDEBAR (Apps Panel) ===== */
+    .sidebar {
+      position: absolute;
+      left: 15px;
+      top: 80px;
+      width: 240px;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(12px);
+      border-radius: 15px;
+      padding: 15px;
+      color: white;
+    }
+
+    .sidebar h3 {
+      margin: 0 0 12px 0;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .app {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 12px;
+      cursor: pointer;
+      background: rgba(255,255,255,0.08);
+      margin-bottom: 8px;
+      transition: 0.2s;
+    }
+
+    .app:hover {
+      background: rgba(255,255,255,0.2);
+      transform: scale(1.03);
+    }
+
+    .app-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .app-name {
+      font-size: 13px;
+    }
+
+    /* ===== CENTER NEW TAB AREA ===== */
+    .content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 45px);
+      color: white;
+      text-align: center;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+    }
+
+    h1 {
+      font-size: 45px;
+      margin: 0;
+    }
+
+    p {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    🌐 My Custom New Tab
+    <div class="tabs">
+      <div class="tab">Tab 1</div>
+      <div class="tab">Tab 2</div>
+      <div class="tab">Tab 3</div>
+    </div>
   </div>
 
-  <div class="app">
-    <div class="app-icon">📧</div>
-    <div class="app-name">Gmail</div>
+  <!-- LEFT FAVORITE APPS SIDEBAR -->
+  <div class="sidebar">
+    <h3>⭐ Frequently Visited</h3>
+
+    <div class="app" onclick="window.open('https://www.google.com')">
+      <div class="app-icon">🌐</div>
+      <div class="app-name">Google</div>
+    </div>
+
+    <div class="app" onclick="window.open('https://mail.google.com')">
+      <div class="app-icon">📧</div>
+      <div class="app-name">Gmail</div>
+    </div>
+
+    <div class="app" onclick="window.open('https://www.linkedin.com')">
+      <div class="app-icon">💼</div>
+      <div class="app-name">LinkedIn</div>
+    </div>
+
+    <div class="app" onclick="window.open('https://drive.google.com')">
+      <div class="app-icon">📂</div>
+      <div class="app-name">Drive</div>
+    </div>
+
+    <div class="app" onclick="window.open('https://chat.openai.com')">
+      <div class="app-icon">🧠</div>
+      <div class="app-name">ChatGPT</div>
+    </div>
   </div>
 
-  <div class="app">
-    <div class="app-icon">💼</div>
-    <div class="app-name">LinkedIn</div>
+  <!-- CENTER CONTENT -->
+  <div class="content">
+    <div>
+      <h1>New Tab</h1>
+      <p>Your custom GIF background is active</p>
+    </div>
   </div>
 
-  <div class="app">
-    <div class="app-icon">📂</div>
-    <div class="app-name">Drive</div>
-  </div>
-
-  <div class="app">
-    <div class="app-icon">🧠</div>
-    <div class="app-name">ChatGPT</div>
-  </div>
-</div>
+</body>
+</html>
