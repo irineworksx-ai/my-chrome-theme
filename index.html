@@ -1,84 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Chrome Theme Page</title>
+<!-- Favorite Apps Sidebar -->
+<div class="sidebar">
+  <h3>⭐ Your Apps</h3>
 
-  <style>
-    /* Full screen GIF background */
-    body {
-      margin: 0;
-      height: 100vh;
-      overflow: hidden;
-      background: url("background.gif") center center / cover no-repeat fixed;
-      font-family: Arial, sans-serif;
-    }
-
-    /* Fake top bar (mimics Chrome UI style) */
-    .top-bar {
-      height: 45px;
-      background: rgba(0, 0, 0, 0.35);
-      backdrop-filter: blur(10px);
-      display: flex;
-      align-items: center;
-      padding: 0 15px;
-      color: white;
-      font-size: 14px;
-    }
-
-    .tabs {
-      display: flex;
-      gap: 10px;
-      margin-left: 20px;
-    }
-
-    .tab {
-      padding: 6px 12px;
-      border-radius: 10px;
-      background: rgba(255,255,255,0.15);
-    }
-
-    .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: calc(100vh - 45px);
-      color: white;
-      text-align: center;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.7);
-    }
-
-    h1 {
-      font-size: 40px;
-      margin: 0;
-    }
-
-    p {
-      opacity: 0.8;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- Fake Chrome tab bar -->
-  <div class="top-bar">
-    🌐 My Custom Chrome Page
-    <div class="tabs">
-      <div class="tab">Tab 1</div>
-      <div class="tab">Tab 2</div>
-      <div class="tab">Tab 3</div>
-    </div>
+  <div class="app">
+    <div class="app-icon">🌐</div>
+    <div class="app-name">Google</div>
   </div>
 
-  <!-- Main content -->
-  <div class="content">
-    <div>
-      <h1>Welcome</h1>
-      <p>Your GIF background is active</p>
-    </div>
+  <div class="app">
+    <div class="app-icon">📧</div>
+    <div class="app-name">Gmail</div>
   </div>
 
-</body>
-</html>
+  <div class="app">
+    <div class="app-icon">💼</div>
+    <div class="app-name">LinkedIn</div>
+  </div>
+
+  <div class="app">
+    <div class="app-icon">📂</div>
+    <div class="app-name">Drive</div>
+  </div>
+
+  <div class="app">
+    <div class="app-icon">🧠</div>
+    <div class="app-name">ChatGPT</div>
+  </div>
+</div>
